@@ -17,7 +17,7 @@ A> I'd prefer something else, but I must accept that what gets typed back to us 
 
 ### functions and identities
 
-You recall that we have two types of values with respect to identity: Value types and reference types. Value types share the same identity if they have the same contents.Reference types do not.
+You recall that we have two types of values with respect to identity: Value types and reference types. Value types share the same identity if they have the same contents. Reference types do not.
 
 Which kind are functions? Let's try it. For reasons of appeasing the JavaScript parser, we'll enclose our functions in parentheses:
 
