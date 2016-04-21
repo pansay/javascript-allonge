@@ -56,7 +56,7 @@ The take-away is that `compose` is helpful when we are defining a new function t
 
 ### pipeline
 
-`compose` is extremely handy, but one thing it doesn't communicate well is the order on operations. `compose` is written that way because it matches the way explicitly composing functions works in JavaScript and most other languages: When you write a(b(...)), `a` happens after `b`.
+`compose` is extremely handy, but one thing it doesn't communicate well is the order of operations. `compose` is written that way because it matches the way explicitly composing functions works in JavaScript and most other languages: When you write a(b(...)), `a` happens after `b`.
 
 Sometimes it makes more sense to compose functions in data flow order, as in "The value flows through a and then through b." For this, we can use the `pipeline` function:
 
