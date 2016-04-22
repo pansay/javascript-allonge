@@ -62,7 +62,7 @@ Iterators allow us to write (or refactor) functions to operate on iterators inst
 
 ### refactoring the tortoise and hare
 
-Now we'll refactor the Tortoise and Hare to use iterators instead of directly operate on linked lists. We'll add an `.iterator()` method to linked lists, and we'll rewrite our loop detector function to take an "iterable" instead of a list:
+Now we'll refactor the Tortoise and Hare to use iterators instead of directly operating on linked lists. We'll add an `.iterator()` method to linked lists, and we'll rewrite our loop detector function to take an "iterable" instead of a list:
 
 {:lang="javascript"}
 ~~~~~~~~
