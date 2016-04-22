@@ -142,7 +142,7 @@ Instance behaviour in a classist language is defined with special syntax. If cha
 
 JavaScript splits the responsibility for instances into a constructor and a prototype. A constructor in JavaScript can be any function. Constructors are responsible for creating new instances.
 
-A prototype in JavaScript can be any object. Prototypes are responsible for defining the behaviour of instances. prototypes don't have special methods or properties.
+A prototype in JavaScript can be any object. Prototypes are responsible for defining the behaviour of instances. Prototypes don't have special methods or properties.
 
 Instance behaviour in JavaScript is defined by modifying the prototype directly, e.g. by adding functions to it as properties. There is no special syntax for defining a class or modifying a class.
 
