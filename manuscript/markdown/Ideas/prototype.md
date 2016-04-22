@@ -13,7 +13,7 @@ That sounds tautological, until we look at JavaScript. But let's start with a qu
 In Ruby, classes are objects, but they're special objects. For example, here are some of the methods associated with the Ruby class `String`:
 
     String.methods
-      #=> [:try_convert, :allocate, :new, :superclass, :freeze, :===, :==,
+      //=> [:try_convert, :allocate, :new, :superclass, :freeze, :===, :==,
            :<=>, :<, :<=, :>, :>=, :to_s, :included_modules, :include?, :name, 
            :ancestors, :instance_methods, :public_instance_methods, 
            :protected_instance_methods, :private_instance_methods, :constants, 
@@ -23,13 +23,13 @@ In Ruby, classes are objects, but they're special objects. For example, here are
            :private_constant, :module_exec, :class_exec, :module_eval, :class_eval, 
            :method_defined?, :public_method_defined?, :private_method_defined?, 
            :protected_method_defined?, :public_class_method, :private_class_method, 
-           # ...
+           // ...
            :!=, :instance_eval, :instance_exec, :__send__, :__id__] 
 
 And here are some of the methods associated with an instance of a string:
 
     String.new.methods
-      #=> [:<=>, :==, :===, :eql?, :hash, :casecmp, :+, :*, :%, :[],
+      //=> [:<=>, :==, :===, :eql?, :hash, :casecmp, :+, :*, :%, :[],
            :[]=, :insert, :length, :size, :bytesize, :empty?, :=~,
            :match, :succ, :succ!, :next, :next!, :upto, :index, :rindex,
            :replace, :clear, :chr, :getbyte, :setbyte, :byteslice,
@@ -39,7 +39,7 @@ And here are some of the methods associated with an instance of a string:
            :chars, :codepoints, :reverse, :reverse!, :concat, :<<,
            :prepend, :crypt, :intern, :to_sym, :ord, :include?,
            :start_with?, :end_with?, :scan, :ljust, :rjust, :center,
-           # ...
+           // ...
            :instance_eval, :instance_exec, :__send__, :__id__]
 
 As you can see, a "class" in Ruby is very different from an "instance of that class." And the methods of a class are very different from the methods of an instance of that class.
