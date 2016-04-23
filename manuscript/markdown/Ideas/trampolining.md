@@ -67,7 +67,7 @@ Finally, we call `factorial(0)` and it returns `1`. Then the top is popped off t
 
 How can we get around this? Well, imagine if we don't have a hole in a computation to return. In that case, we wouldn't need to "remember" anything on the stack. To make this happen, we need to either return a value or return the result of calling another function without any further computation.
 
-Such a call is said to be in "tail position" and to be a "tail call." The "elimination" of tail-call elimination means that we don't perform a full call including setting up a new stack frame. We perform the equivalent of a "jump." 
+Such a call is said to be in "tail position" and to be a "tail call." The "elimination" of tail-call elimination means that we don't perform a full call including setting up a new stack frame. We perform the equivalent of a "jump."
 
 For example:
 
@@ -78,7 +78,7 @@ function factorial (n) {
     ? myself(acc * n, n - 1)
     : acc
   };
-  
+
   return _factorial(1, n);
 }
 ~~~~~~~~
@@ -102,7 +102,7 @@ When we call a function, it returns a *thunk* that we call to get a result. Of c
 
 A *thunk* is a function taking no arguments that delays evaluating an expression. For example, this is a thunk: `function () { return 'Hello World'; }`.
 
-An extremely simple and useful implementation of trampolining can be found in the [Lemonad] library. It works provided that you want to trampoline a function that doesn't return a function. Here it is: 
+An extremely simple and useful implementation of trampolining can be found in the [Lemonad] library. It works provided that you want to trampoline a function that doesn't return a function. Here it is:
 
 [Lemonad]: http://fogus.github.com/lemonad/
 
@@ -144,7 +144,7 @@ function factorial (n) {
     ? function () { return myself(acc * n, n - 1); }
     : acc
   });
-  
+
   return _factorial(1, n);
 }
 
@@ -162,7 +162,7 @@ Presto, it runs for `n = 32768`. Sadly, JavaScript's built-in support for intege
 npm install big-integer
 
 var variadic = require('allong.es').variadic,
-    bigInt = require("big-integer");
+    bigInt = require('big-integer');
 
 var trampoline = function (fn) {
   return variadic( function (args) {
@@ -173,7 +173,7 @@ var trampoline = function (fn) {
     }
 
     return result;
-    
+
   });
 };
 
@@ -183,7 +183,7 @@ function factorial (n) {
     ? function () { return myself(acc.times(n), n.minus(1)); }
     : acc
   });
-  
+
   return _factorial(bigInt.one, bigInt(n));
 }
 
